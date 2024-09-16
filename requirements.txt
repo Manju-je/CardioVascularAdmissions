@@ -1,3 +1,13 @@
 streamlit
 joblib
 scikit-learn
+statsmodels
+sklearn
+scipy
+numpy
+seaborn
+matplotlib
+pandas
+xgboost
+tensorflow
+keras
