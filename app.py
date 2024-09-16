@@ -37,49 +37,43 @@ if (diabetes == 'Yes'):
 else:
     dm = 0
 
-prior_cmp = col4.radio('Prior CMP',('Yes', 'No'))
+cor_ad = col4.radio('Coronary Artery Disease',('Yes', 'No'))
+if (cor_ad == 'Yes'):
+    cad = 1
+else:
+    cad = 0  
+
+col5, col6 = st.columns(2)
+prior_cmp = col5.radio('Prior CMP',('Yes', 'No'))
 if (prior_cmp == 'Yes'):
     pcmp = 1
 else:
     pcmp = 0
-    
 
-    
-col5, col6 = st.columns(2)    
-raised_ce = col5.radio('Raised Cardiac Enzymes',('Yes', 'No'))
+raised_ce = col6.radio('Raised Cardiac Enzymes',('Yes', 'No'))
 if (raised_ce == 'Yes'):
     rce = 1
 else:
     rce = 0  
     
-stable_ang = col6.radio('Stable Angina',('Yes', 'No'))
+col7, col8 = st.columns(2)
+stable_ang = col7.radio('Stable Angina',('Yes', 'No'))
 if (stable_ang == 'Yes'):
     sa = 1
 else:
     sa = 0
-
-    
-col7, col8 = st.columns(2)    
-acute_cs = col7.radio('Acute Coronary Syndrome',('Yes', 'No'))
+   
+acute_cs = col8.radio('Acute Coronary Syndrome',('Yes', 'No'))
 if (acute_cs == 'Yes'):
     acs = 1
 else:
     acs = 0
         
-atyp_cp = col8.radio('Atypical Chest Pain',('Yes', 'No'))
+atyp_cp = st.radio('Atypical Chest Pain',('Yes', 'No'))
 if (atyp_cp == 'Yes'):
     acp = 1
 else:
     acp = 0
-
-
-    
-cor_ad = st.radio('Coronary Artery Disease',('Yes', 'No'))
-if (cor_ad == 'Yes'):
-    cad = 1
-else:
-    cad = 0    
-
 
     
 def predict_heart_failure():
