@@ -20,7 +20,6 @@ if (gender == 'Male'):
     gen = 1
 else:
     gen = 0    
-    
 
 age = st.slider('Age (years)', 1,100)
 hb = st.number_input('Haemoglobin (g/dL)', 3.0,26.5)
@@ -68,6 +67,12 @@ if (acute_cs == 'Yes'):
     acs = 1
 else:
     acs = 0
+
+atyp_cp = st.radio('Atypical Chest Pain',('Yes', 'No'))
+if (atyp_cp == 'Yes'):
+    acp = 1
+else:
+    acp = 0
 
 def predict_heart_failure():
     column_names = [['AGE', 'HB', 'GLUCOSE', 'UREA', 'EF', 'GENDER_M',
